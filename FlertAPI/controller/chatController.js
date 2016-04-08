@@ -23,11 +23,11 @@
     }
     
     module.escrevendo = function (socket) {
-        socket.broadcast.emit('escrevendo', { nickname: socket.login });
+        socket.broadcast.emit('escrevendo', { username: socket.login });
     }
     
     module.paraEscrevendo = function (socket) {
-        socket.broadcast.emit('paraEscrevendo', { nickname: socket.login });
+        socket.broadcast.emit('paraEscrevendo', { username: socket.login });
     }
 
     return module;
