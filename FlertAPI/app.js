@@ -17,6 +17,10 @@ io.on('connection', function (socket) {
     socket.on('mensagem', function (mensagem) {
         chatCtrl.mensagem(socket, mensagem);
     });
+
+    socket.on('escrevendo', function (nickname) {
+        chatCtrl.escrevendo(socket, nickname);
+    });
 });
 
 http.listen(3000, function () {
