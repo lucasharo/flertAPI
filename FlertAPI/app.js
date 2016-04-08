@@ -18,8 +18,12 @@ io.on('connection', function (socket) {
         chatCtrl.mensagem(socket, mensagem);
     });
 
-    socket.on('escrevendo', function (nickname) {
-        chatCtrl.escrevendo(socket, nickname);
+    socket.on('escrevendo', function () {
+        chatCtrl.escrevendo(socket);
+    });
+
+    socket.on('paraEscrevendo', function () {
+        chatCtrl.paraEscrevendo(socket);
     });
 });
 

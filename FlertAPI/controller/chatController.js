@@ -21,6 +21,14 @@
     module.mensagem = function (socket, mensagem) {
         socket.broadcast.emit('mensagem', { nickname: socket.login, mensagem: mensagem });
     }
+    
+    module.escrevendo = function (socket) {
+        socket.broadcast.emit('escrevendo', { nickname: socket.login });
+    }
+    
+    module.paraEscrevendo = function (socket) {
+        socket.broadcast.emit('paraEscrevendo', { nickname: socket.login });
+    }
 
     return module;
 }
